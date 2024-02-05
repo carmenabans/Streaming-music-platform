@@ -1,0 +1,465 @@
+/* Establecemos valores universales para empezar desde cero con un estilo "limpio" para todos los formatos */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+}
+
+label{
+    display: none;
+    color: var(--secondary-color);
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+.dark_theme{
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+/* Definimos el grid a utilizar */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float:left;
+    padding: 15px;
+}
+
+/* Estilizamos el body que contiene todas las secciones de la página para todos los formatos */
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ai{
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    border-radius: 30px;
+    border-color: #0098DD;
+}
+
+/* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+.header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    font-family: 'Abel', sans-serif;
+}
+
+.col-9{
+    display:flex;
+    align-items: center;
+}
+
+.col-3 {
+    padding: 0;
+}
+
+.bi {
+    color: #0098DD;
+    font-size: 40px;
+}
+
+#bi-person-circle2{
+    cursor: default;
+}
+
+
+/*Icono volver atras*/
+.bi-arrow-left-circle {
+    margin: auto;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/*Imagen panda*/
+#logo {
+    margin: auto;
+    width: 80px;
+    border-radius: 100px;
+    float: right;
+    margin-right: 0;
+}
+
+/*Logo texto*/
+#logo_text {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    margin-left: 0;    
+}
+
+/*imagen al iniciar sesión*/
+#bi-person-circle {
+    margin: auto; 
+    font-size: 45px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.nav{
+    display: none;
+}
+
+.nav .bi:hover{
+    opacity:0.5;
+}
+
+.footer .bi:hover{
+    opacity:0.5;
+}
+
+.bi-arrow-left-circle:hover{
+    opacity:0.5;
+}
+
+/*Estilo de las secciones de música y la barra de scroll interna para todos los formatos*/
+/*Posición del main + color de fondo + barra interna de scroll*/
+.main {
+    width: 75%;
+    height: 71.5vh;
+    background-color: white;
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+}
+
+/*Estilo de la barra de scroll interna*/
+.main::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 7px;
+}
+
+/*Ancho de la barra de scroll interna*/
+.main::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+/*Color de la barra de scroll interna*/
+.main::-webkit-scrollbar-thumb {
+    background-color:#0098DD;
+}
+
+.main .ai{
+    width:140px;
+    height: 140px;
+    border-radius: 70px;
+}
+
+.imagen_cambio{
+    text-align: center;
+    position: relative;
+}
+
+.cambiar_imagen{
+    text-align: center;
+    position: relative;
+}
+
+.cambiar_imagen a{
+    text-decoration: none;
+    color: black; 
+    font-size: 18px;
+}
+
+.cambiar_imagen a:hover{
+    opacity: 0.5;
+}
+
+#bi-person-circle2:before{
+    font-size: 180px;
+}
+
+::placeholder{
+    text-align: center;
+    color: white;
+    width:100%;
+    display: inline-flex;
+}
+
+.caja {
+    border-radius: 10px;
+    width: 90%;
+    position: relative;
+    background:  #005E8A;
+    color: white;
+    padding: 0.8rem;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+}
+
+.caja1 {
+    border-radius: 20px;
+    width: 90%;
+    position: relative;
+    background:  #005E8A;
+    color: white;
+    padding: 0.8rem;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    border: none;
+}
+
+.informacion_reg {
+    text-align: center;
+}
+
+.informacion_reg p{
+    font-size: 13px;
+    color: rgb(49, 45, 45);
+}
+
+.aceptar {
+    text-align: left;
+}
+
+.enviar {
+    text-align: center;
+}
+
+.botones_abajo {
+    color: black;
+    border: 1px solid #f2ebd8;
+    font-size: 20px;
+    background: #f2ebd8;
+    border-radius: 35px;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
+
+.caja:hover{
+    opacity: 0.5;
+}
+
+.caja1:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+    color: white;
+}
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.footer .navegacion {
+    display: flex;
+    flex-direction: row;
+    list-style: none;   
+}
+
+.footer .navegacion li {
+    text-align: center;
+    margin: auto;
+}
+
+body.dark_theme #logo{
+    content: url(../images/panda_dark.png);
+}
+
+.main, .header, .footer, .nav{
+    background-color: var(--primary-color);
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.main h1, p, h2, h3{
+    color: var(--secondary-color);
+}
+
+.header h1{
+    color: var(--secondary-color);
+}
+
+#descripcion{
+    color: var(--secondary-color);
+}
+
+/* Formato para móviles*/
+[class*= "col-"] {
+    width: 100%;
+}
+
+/* Formato para tablet */
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 100%}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 100%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    .nav{
+        padding: 0;
+        height: 80%;
+        top:0;
+        left:0;
+        z-index: 1;
+        display: block;
+    }
+
+    .navegacion li {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .nav .bi {
+        color: #0098DD;
+        font-size: 40px;
+    }
+
+    /*Icono tres rayitas*/
+    .bi-list {
+        font-size: 45px;
+    }
+
+    /*Imagen panda*/
+    #logo {
+        width: 90px;
+    }
+
+    /*Logo texto*/
+    #logo_text {
+        font-size: 25px;
+    }
+
+    /*imagen al iniciar sesión*/
+    .bi-person-circle {
+        font-size: 50px;
+    }
+
+    /*Estilo de las secciones de música para tablet*/
+    .main {
+        height: 80vh;
+    }
+
+    /* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+    .header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    
+    .ai{
+        width: 60px;
+        height: 60px;
+        margin-right: 8px;
+        border-radius: 40px;
+        border-color: #0098DD;
+    }
+    
+}
+
+/* Formato para desktop */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 100%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 100%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    /*Estilo de la barra de navegación para desktop*/
+    /*Navegación (lado izquierda)*/
+    /*Estilo de la barra de navegación lateral para tablets*/
+    .nav{
+        display: block;
+    }
+
+    .navegacion {
+        list-style: none;
+    }
+
+    .navegacion li {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .nav .bi {
+        color: #0098DD;
+        font-size: 40px;
+    }
+    
+    /* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+    .header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        font-family: 'Abel', sans-serif;
+    }
+
+    /*Icono tres rayitas*/
+    .bi-list {
+        font-size: 50px;
+    }
+
+    /*Imagen panda*/
+    #logo {
+        width: 100px;
+    }
+
+    /*Logo texto*/
+    #logo_text {
+        font-size: 30px;
+    }
+
+    /*imagen al iniciar sesión*/
+    .bi-person-circle {
+        font-size: 55px;
+        margin-right: 10px;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .ai{
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+        border-radius: 50px;
+        border-color: #0098DD;
+    }
+}

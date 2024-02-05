@@ -1,0 +1,484 @@
+/* Establecemos valores universales para empezar desde cero con un estilo "limpio" para todos los formatos */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+.dark_theme{
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+/* Definimos el grid a utilizar */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float:left;
+    padding: 15px;
+}
+
+/* Estilizamos el body que contiene todas las secciones de la página para todos los formatos */
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+.header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    font-family: 'Abel', sans-serif;
+}
+
+.col-9{
+    display:flex;
+    align-items: center;
+}
+
+.col-3 {
+    padding: 0;
+}
+
+.bi {
+    color: #0098DD;
+    font-size: 40px;
+}
+
+.ai{
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    border-radius: 30px;
+    border-color: #0098DD;
+}
+
+/*Icono volver atras*/
+.bi-arrow-left-circle {
+    margin: auto;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/*Imagen panda*/
+#logo {
+    margin: auto;
+    width: 80px;
+    border-radius: 100px;
+    float: right;
+    margin-right: 0;
+}
+
+/*Logo texto*/
+#logo_text {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    margin-left: 0;    
+}
+
+/*imagen al iniciar sesión*/
+.bi-person-circle {
+    margin: auto; 
+    font-size: 45px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.nav{
+    display: none;
+}
+
+/*Estilo de las secciones de música y la barra de scroll interna para todos los formatos*/
+/*Posición del main + color de fondo + barra interna de scroll*/
+.main {
+    width: 75%;
+    height: 71.5vh;
+    background-color: white;
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+}
+
+/*Estilo de la barra de scroll interna*/
+.main::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 7px;
+}
+
+/*Ancho de la barra de scroll interna*/
+.main::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+/*Color de la barra de scroll interna*/
+.main::-webkit-scrollbar-thumb {
+    background-color:#0098DD;
+}
+
+.main .ai{
+    width:140px;
+    height: 140px;
+    border-radius: 70px;
+}
+
+
+.foto_nombre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 80px;
+}
+
+.palabras{
+    margin-top: 10px;
+}
+
+.palabras h1{
+    font-size: 30px;
+    margin-left: 20px;;
+    
+}
+
+.ver_perfil{
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.orden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.orden p{
+    font-size: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.orden .Iconos{
+    margin: 0 auto;
+    margin-left: 15%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.orden .Texto{
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+}
+
+.bi-x-circle::before {
+    margin-top: 10px;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.footer .navegacion {
+    display: flex;
+    flex-direction: row;
+    list-style: none;   
+}
+
+.footer .navegacion li {
+    text-align: center;
+    margin: auto;
+}
+
+.footer .bi:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+.nav .bi:hover, .bi-arrow-left-circle:hover{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+.main a:link, a:visited, a:active{
+    color: black;
+    text-decoration: none;
+}
+
+.main a:hover, p:hover{
+    color:#0098DD;
+}
+
+body.dark_theme .bi-moon{
+    display: none;
+}
+
+body.dark_theme .bi-sun{
+    display:block;
+}
+
+.calificacion {
+    display: flex;
+    align-items: center;
+}
+
+.my-rating-9{
+    margin-left: 20px;
+}
+
+.live-rating{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+body .bi-sun{
+    display: none;
+}
+
+body.dark_theme #logo{
+    content: url(../images/panda_dark.png);
+}
+
+.main, .header, .footer, .nav{
+    background-color: var(--primary-color);
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.main h1, p, span{
+    color: var(--secondary-color);
+}
+
+.header h1{
+    color: var(--secondary-color);
+}
+
+/* Formato para móviles*/
+[class*= "col-"] {
+    width: 100%;
+}
+
+/* Formato para tablet */
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 100%}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 100%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    .nav{
+        padding: 0;
+        height: 80%;
+        top:0;
+        left:0;
+        z-index: 1;
+        display: block;
+    }
+
+    .navegacion li {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .nav .bi {
+        color: #0098DD;
+        font-size: 40px;
+    }
+
+    /*Estilo de las secciones de música para tablet*/
+    .main {
+        height: 80vh;
+    }
+
+    /*Icono tres rayitas*/
+    .bi-list {
+        font-size: 45px;
+    }
+
+    /*Imagen panda*/
+    #logo {
+        width: 90px;
+    }
+
+    /*Logo texto*/
+    #logo_text {
+        font-size: 25px;
+    }
+
+    /*imagen al iniciar sesión*/
+    .bi-person-circle {
+        font-size: 50px;
+    }
+
+    /* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+    .header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .caja {
+        width: 80%;
+    }
+
+    .registro_icono li a {
+        width: 80%;
+    }
+
+    .form_bot {
+        display: flex;
+    }
+
+    .bi-arrow-right-circle::before {
+        margin-top: 110px;
+    }
+
+    .orden .Texto{
+        margin: 0 auto;
+        margin-left: 20px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .palabras h1{
+        font-size: 40px;
+    }
+
+    .ai{
+        width: 60px;
+        height: 60px;
+        margin-right: 8px;
+        border-radius: 40px;
+        border-color: #0098DD;
+    }
+    
+}
+
+/* Formato para desktop */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 100%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 100%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    /*Estilo de la barra de navegación para desktop*/
+    /*Navegación (lado izquierda)*/
+    /*Estilo de la barra de navegación lateral para tablets*/
+    .nav{
+        display: block;
+    }
+
+    .navegacion {
+        list-style: none;
+    }
+
+    .navegacion li {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .nav .bi {
+        color: #0098DD;
+        font-size: 40px;
+    }
+
+    .bi {        
+        font-size: 40px;        
+    }
+
+    /*Icono tres rayitas*/
+    .bi-list {
+        font-size: 50px;
+    }
+
+    /*Imagen panda*/
+    #logo {
+        width: 100px;
+    }
+
+    /*Logo texto*/
+    #logo_text {
+        font-size: 30px;
+    }
+
+    /*imagen al iniciar sesión*/
+    .bi-person-circle {
+        font-size: 55px;
+        margin-right: 10px;
+    }
+    
+    /* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+    .header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .caja {
+        width: 60%;
+    }
+
+    .registro_icono li a {
+        width: 60%;
+    }
+
+    .ai{
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+        border-radius: 50px;
+        border-color: #0098DD;
+    }
+}

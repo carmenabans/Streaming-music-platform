@@ -1,0 +1,872 @@
+/* Establecemos valores universales para empezar desde cero con un estilo "limpio" para todos los formatos */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+.dark_theme{
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+label {
+    display: none;
+}
+
+/* Definimos el grid a utilizar */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float:left;
+    padding: 15px;
+}
+
+/* Estilizamos el body que contiene todas las secciones de la página para todos los formatos */
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.ai{
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    border-radius: 30px;
+    border-color: #0098DD;
+}
+
+/* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+.header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    font-family: 'Abel', sans-serif;
+}
+
+.main .pl_nom:hover{
+    color: #0098DD;
+}
+
+
+.nav .bi:hover, .bi-arrow-left-circle:hover{
+    opacity: 0.5;
+}
+
+.footer .bi:hover{
+    opacity:0.5;
+}
+
+.col-9{
+    display:flex;
+    align-items: center;
+}
+
+.col-3 {
+    padding: 0;
+}
+
+.main .ai{
+    width:140px;
+    height: 140px;
+    border-radius: 70px;
+}
+
+.bi {
+    color: #0098DD;
+    font-size: 40px;
+}
+
+/*Icono volver atras*/
+.bi-arrow-left-circle {
+    margin: auto;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/*Imagen panda*/
+#logo {
+    margin: auto;
+    width: 80px;
+    border-radius: 100px;
+    float: right;
+    margin-right: 0;
+}
+
+/*Logo texto*/
+#logo_text {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    margin-left: 0;    
+}
+
+/*imagen al iniciar sesión*/
+.bi-person-circle {
+    margin: auto; 
+    font-size: 45px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.nav{
+    display: none;
+}
+
+/*Estilo de las secciones de música y la barra de scroll interna para todos los formatos*/
+/*Posición del main + color de fondo + barra interna de scroll*/
+.main {
+    width: 75%;
+    height: 71.5vh;
+    background-color: white;
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+}
+
+/*Estilo de la barra de scroll interna*/
+.main::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 7px;
+}
+
+/*Ancho de la barra de scroll interna*/
+.main::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+/*Color de la barra de scroll interna*/
+.main::-webkit-scrollbar-thumb {
+    background-color:#0098DD;
+}
+
+.main #nombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main #nombre img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.main #info_usuario{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.main #info_usuario p{
+    border: solid 2px #0098DD;
+    border-radius: 10%;
+    padding: 10px;
+}
+
+#canciones_favoritas {
+    max-height: 251px;
+    overflow: hidden;
+}
+
+#canciones_favoritas_container {
+    max-height: 350px;
+}
+
+.main .playlist img{
+    width: 70px;
+    border-radius: 10px;
+}
+
+.main .playlist .pl{
+    display: flex;
+}
+
+.main .playlist p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.main .playlist h3, .titulo{
+    font-family: 'Staatliches', cursive;
+    text-decoration: underline;
+}
+
+.main .playlist .pl .bi-heart-fill{
+    color: rgb(219, 80, 80);
+    font-size: 20px;
+    right: 0;
+    width: 10%;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.main .playlist button {
+    background-color: #0098DD;
+    border: 0;
+    color: white;
+    padding: 10px;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    border-radius: 10%;
+    transition: background-color .5s;
+    cursor: pointer;
+}
+
+.main .playlist a {
+    color: black;
+}
+
+#vermas {
+    background-color: #005E8A;
+    color: white;
+    border: 0;
+    padding: 5px;
+    font-family: 'Abel', sans-serif;
+    font-size: 12px;
+    border-radius: 10%;
+    transition: background-color .5s;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.main .playlist .fav:hover{
+    background-color: rgb(0, 0, 0, 0.286);
+    border-radius: 10px;
+}
+
+.main .playlist .fav {
+    display: none;
+    margin-bottom: 15px;
+
+}
+
+.main a:link, a:visited, a:active{
+    color: black;
+    text-decoration: none;
+}  
+
+.main a:hover{
+    color:#0098DD;
+}
+
+.main .artistas .art img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.main .artistas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main .artistas .art{
+    text-align: center;
+    padding: 10px;
+}
+
+.main .artistas .art:hover{
+    background-color: rgb(0, 0, 0, 0.286);
+    border-radius: 10px;
+}
+
+.main .artistas #art_man{
+    display: none;
+}
+
+.main .playlist .pl .img_play {
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .playlist .pl .img_play .bi{
+    position: absolute;
+    font-size: 30px;
+    color:#0098DD;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.main .playlist .pl .img_play .bi:hover{
+    opacity: 1;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.footer .navegacion {
+    display: flex;
+    flex-direction: row;
+    list-style: none;   
+}
+
+.footer .navegacion li {
+    text-align: center;
+    margin: auto;
+}
+
+body.dark_theme #logo{
+    content: url(../images/panda_dark.png);
+}
+
+.main, .header, .footer, .nav{
+    background-color: var(--primary-color);
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.main h1, p, h2, h3{
+    color: var(--secondary-color);
+}
+
+.header h1{
+    color: var(--secondary-color);
+}
+
+#trackart_Maneskin {
+    display: none;
+}
+
+/* Formato para móviles*/
+[class*= "col-"] {
+    width: 100%;
+}
+
+/* .            PLAYER             . */
+
+.player {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 6px 1px #0000001f ;
+    height: 100px;
+    width: 94%;
+    margin-left: 3%;
+    z-index: 100;
+    position: absolute;
+    bottom: 100px;
+    border-radius: 1.35em ;
+    overflow: hidden;
+    display:table;
+}
+
+.playerpopup {
+    background-color: var(--primary-color);
+    position: absolute;
+    height: 56%;
+    box-shadow: 0 2px 6px 1px #0000001f ;
+    width: 94%;
+    margin-left: 3%;
+    z-index: 100;
+    position: absolute;
+    border-radius: 1.35em ;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.textinplayer, .slider_container {
+    color: var(--secondary-color);
+}
+
+.bi-shuffle:hover, .bi-repeat:hover, .bi-box-arrow-up-right:hover, .bi-heart:hover {
+    opacity: 0.5;
+}
+
+.exit-popup-player {
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    right: 15px;
+
+}
+
+.player_img {
+    border-radius: 1.32em ;
+    width: 80px ;
+    height: 80px ;
+    border-radius: 1.32em ;
+    overflow: hidden;
+    object-fit: cover;
+    margin: 10px;
+}
+
+#player_img_popup {
+    border-radius: 1.32em ;
+    width: 100px ;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    object-fit: cover;  
+}
+
+.track-art {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.32em ;
+    background-image: URL("https://img.freepik.com/vector-gratis/fondo-feliz-navidad-dibujado-mano_23-2148793248.jpg?w=2000");
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+
+.playpause-track {
+    position: absolute;
+    color: white;
+    width: 80px ;
+    height: 80px ;
+    top: 0;
+    border-radius: 1.32em ;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+    margin-left: 0;
+}
+
+#playpause-track-popup {
+    position: absolute;
+    color: white;
+    width: 100px ;
+    height: 100px ;
+    top: -10px;
+    left: 0px;
+    border-radius: 1.32em ;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+    margin-left: 0;
+}
+
+.player_content_popup {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+.player_content_popup::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.player_controls {
+    position: absolute;
+    height: 60% ;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+    top:0;
+    left: 90px;
+    border-radius: 1.32em ;
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textinplayer {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+
+#textinpopupplayer {
+    width: 80%;
+}
+
+.track-name {
+    height: 60%;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.track-artist {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_container {
+    position: absolute;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+    width: stretch;
+    height: 30% ;
+    top:60%;
+    left: 90px;
+    border-radius: 1.32em ;
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Abel', sans-serif;
+}
+
+#slider_container_popup {
+    position: relative;
+    width: 80%;
+    height: 15px ;
+    top:0%;
+    left: 0px;
+    border-radius: 1.32em ;
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seek_slider {
+    width: 60%;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 1em ;
+    touch-action : none ;
+    background-color: #0098DD ;
+    appearance: none;
+    height: 1px;
+    background: #e5e7ea;
+    opacity: 0.7;
+}
+
+.current-time, .total-duration {
+    font-size: 12px;
+}
+
+.player_popup_icons {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    font-size: 40px;
+}
+
+#playerpopup_heart {
+    color: #0098DD;
+    font-size: 40px;
+}
+
+/* Formato para tablet */
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 100%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 100%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    .nav{
+        padding: 0;
+        height: 80%;
+        top:0;
+        left:0;
+        z-index: 1;
+        display: block;
+    }
+
+    .navegacion li {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .nav .bi {
+        color: #0098DD;
+        font-size: 40px;
+    }
+
+    /*Icono tres rayitas*/
+    .bi-list {
+        font-size: 45px;
+    }
+
+    /*Imagen panda*/
+    #logo {
+        width: 90px;
+    }
+
+    /*Logo texto*/
+    #logo_text {
+        font-size: 25px;
+    }
+
+    /*imagen al iniciar sesión*/
+    .bi-person-circle {
+        font-size: 50px;
+    }
+
+    /*Estilo de las secciones de música para tablet*/
+    .main {
+        height: 80vh;
+    }
+
+    .main .playlist img{
+        width: 100px;
+    }   
+    
+    .main .playlist p{
+        font-size: 20px;
+    }    
+
+    .main .playlist .pl .img_play .bi{
+        font-size: 40px;
+    }
+
+    .main .playlist h3, .titulo{
+        font-size: 25px;
+    }
+
+    .main .artistas .art img{
+        width: 135px;
+    }
+
+    .main .artistas .art p{
+        font-size: 20px;
+    }
+
+    /* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+    .header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    #canciones_favoritas {
+        max-height: 345px;
+        overflow: hidden;
+        height: auto;
+    }
+    
+    #canciones_favoritas_container {
+        max-height: 500px;
+        height: auto;
+    }
+
+    .player {
+        bottom: 20px;
+        width: 88%;
+        margin-left: 10%;
+        
+    }
+    
+    .playerpopup {
+        height: 66%;
+        width: 88%;
+        margin-left: 10%;
+        display: none;
+    }
+
+    .player_img {
+       
+        width: 80px ;
+        height: 80px ;
+        
+    }
+    
+    #player_img_popup {
+        
+        width: 200px ;
+        height: 200px;
+        
+    }
+
+    .track-art {
+        
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    #playpause-track-popup {
+        
+        width: 200px ;
+        height: 200px ;
+        
+    }
+
+    .ai{
+        width: 60px;
+        height: 60px;
+        margin-right: 8px;
+        border-radius: 40px;
+        border-color: #0098DD;
+    }
+
+    #vermas {
+        padding: 5px;
+        font-size: 20px;
+        margin-left: 3px;
+    }
+    
+}
+
+/* Formato para desktop */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 100%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 100%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    /*Estilo de la barra de navegación para desktop*/
+    /*Navegación (lado izquierda)*/
+    /*Estilo de la barra de navegación lateral para tablets*/
+    .nav{
+        display: block;
+    }
+
+    .navegacion {
+        list-style: none;
+    }
+
+    .navegacion li {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .nav .bi {
+        color: #0098DD;
+        font-size: 40px;
+    }
+
+   /*Icono tres rayitas*/
+   .bi-list {
+    font-size: 50px;
+    }
+
+    /*Imagen panda*/
+    #logo {
+        width: 100px;
+    }
+
+    /*Logo texto*/
+    #logo_text {
+        font-size: 30px;
+    }
+
+    /*imagen al iniciar sesión*/
+    .bi-person-circle {
+        font-size: 55px;
+        margin-right: 10px;
+    }
+
+    .main .playlist img{
+        width: 100px;
+    }   
+
+    .main .playlist p{
+        font-size: 20px;
+    } 
+    
+    .main .playlist .pl .img_play .bi{
+        font-size: 40px;
+    }
+
+    .main .playlist h3, .titulo{
+        font-size: 25px;
+    }
+
+    .main .artistas .art img{
+        width: 135px;
+    }
+
+    .main .artistas .art p{
+        font-size: 20px;
+    }
+
+    
+    /* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+    .header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .ai{
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+        border-radius: 50px;
+        border-color: #0098DD;
+    }
+
+}

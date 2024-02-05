@@ -1,0 +1,827 @@
+/* Establecemos valores universales para empezar desde cero con un estilo "limpio" para todos los formatos */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+.dark_theme{
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Definimos el grid a utilizar */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float:left;
+    padding: 15px;
+}
+
+/* Estilizamos el body que contiene todas las secciones de la página para todos los formatos */
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+}
+
+.col-10 {
+    display: flex;
+    align-items: center;
+}
+
+.col-2 {
+    display: flex;
+    text-align: center;
+}
+
+/* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+.header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    font-family: 'Abel', sans-serif;
+}
+
+/*Icono tres rayitas*/
+.bi-list {
+    margin: auto;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/*Imagen panda*/
+#logo {
+    margin: auto;
+    width: 80px;
+    border-radius: 100px;
+    float: right;
+    margin-right: 0;
+}
+
+/*Logo texto*/
+#logo_text {
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    margin-left: 0;    
+}
+
+/*Boton iniciar sesión*/
+.inicioSesion {
+    margin: auto;
+    background-color: #0098DD;
+    transition: background-color .5s;
+    border-radius: 15px;
+    font-family: 'Abel', sans-serif;
+    text-decoration: none;
+    color: white ;  
+    padding: 7px;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+#log_in_btn:hover {
+    opacity: 0.5;
+}
+
+/*Navegación (lado izquierda)*/
+.navegacion {
+    display: flex;
+    flex-direction: row;
+    list-style: none;    
+}
+
+.navegacion li {
+    text-align: center;
+    margin: auto;
+}
+
+.nav .bi {
+    color: #0098DD;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.nav .bi:hover {
+    opacity: 0.5;
+}
+
+
+/*Estilo de las secciones de música y la barra de scroll interna para todos los formatos*/
+/*Posición del main + color de fondo + barra interna de scroll*/
+.main {
+    width: 75%;
+    height: 71.5vh;
+    background-color: white;
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+}
+
+/*Estilo de la barra de scroll interna*/
+.main::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 7px;
+}
+
+/*Ancho de la barra de scroll interna*/
+.main::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+/*Color de la barra de scroll interna*/
+.main::-webkit-scrollbar-thumb {
+    background-color:#0098DD;
+}
+
+.main h2{
+    font-family: 'Staatliches', cursive;
+}  
+
+.ult_lanz {
+    list-style: none;
+    display:inline-block;
+    border-radius: 10px;
+}
+
+.ult_lanz .img_play {
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ult_lanz .img_play img{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.ult_lanz .img_play .bi{
+    position: absolute;
+    font-size: 40px;
+    color:#0098DD;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.ult_lanz .img_play .bi:hover{
+    opacity: 1;
+}
+
+.ult_lanz p {
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+
+.ult_lanz:hover {
+    background-color: rgb(0, 0, 0, 0.286);
+}
+
+.rock {
+    list-style: none;
+    display:inline-block;
+    border-radius: 10px;
+}
+
+.rock .img_play {
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rock .img_play img{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.rock .img_play .bi{
+    position: absolute;
+    font-size: 40px;
+    color:#0098DD;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.rock .img_play .bi:hover{
+    opacity: 1;
+}
+
+.rock p {
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+
+.rock:hover {
+    background-color: rgb(0, 0, 0, 0.286);
+}
+
+.pop {
+    list-style: none;
+    display:inline-block;
+    border-radius: 10px;
+}
+
+.pop .img_play {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop .img_play img{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.pop .img_play .bi{
+    position: absolute;
+    font-size: 40px;
+    color:#0098DD;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.pop .img_play .bi:hover{
+    opacity: 1;
+}
+
+.pop p {
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+
+.pop:hover {
+    background-color: rgb(0, 0, 0, 0.286);
+}
+
+.rap {
+    list-style: none;
+    display:inline-block;
+    border-radius: 10px;
+}
+
+.rap .img_play {
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rap .img_play img{
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.rap .img_play .bi{
+    position: absolute;
+    font-size: 40px;
+    color:#0098DD;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.rap .img_play .bi:hover{
+    opacity: 1;
+}
+
+.rap p {
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+
+.rap:hover {
+    background-color: rgb(0, 0, 0, 0.286);
+}
+
+
+/*Estilo del footer para todos los formatos + posición fija*/
+/*Disponemos todo el texto alineado al centro, ocupando el total del ancho de la pantalla, "juntado" al bottom de la pagina web. Ademas, proporcionamos color y fomato de letra*/
+.footer {
+    font-family: 'Abel', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+}
+
+/*Asignamos al boton de "registrarse" un fondo distinto al del footer, un efecto de transicion, redondeo de borde del elemento y que el contorno tenga 3px en todos los lados para epararlo del la parte mas baja de la pagina*/
+#register_btn  {
+    border: solid 2px #0098DD;
+    transition: background-color .5s;
+    border-radius: 15px;
+    font-family: 'Abel', sans-serif;
+    text-decoration: none;
+    color: black;  
+    padding: 7px;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer p {
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*Ponemos color de transición al "registrase" cuando se pase el ratón por arriba*/
+.footer a:hover {
+    opacity: 0.5;
+}
+
+
+/* Formato para móviles*/
+[class*= "col-"] {
+    width: 100%;
+}
+
+.popup {
+    display: flexbox;
+    margin: auto;
+    align-items: center;
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: -20px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+#popup1 {
+    display: none;
+}
+
+#popup2 {
+    display: none;
+}
+
+.informacion_reg2 input{
+    width: 70%;
+}
+
+.informacion_reg2 {
+    text-align: center;
+}
+
+.informacion_reg2 p{
+    font-size: 13px;
+    color: rgb(49, 45, 45);
+}
+
+.caja2 {
+    border-radius: 10px;
+    width: 90%;
+    position: relative;
+    background:  #0098DD;
+    color: white;
+    padding: 0.8rem 0rem;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+}
+
+.enviar {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.enviar input{
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.enviar:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.caja1 {
+    border-radius: 20px;
+    width: 90%;
+    position: relative;
+    background:  #0098DD;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+    border: none;
+}
+
+#popup3 {
+    display: none;
+}
+
+.popup-content {
+    position: fixed; /* Stay in place */
+    overflow: auto;
+    background-color: var(--primary-color);
+    z-index: 2; /* Sit on top */
+    width: 90%;
+    height: 90%;
+    border: #0098DD solid 2px;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+#boton {
+    color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.popup-content h1, label, .color {
+    color: var(--secondary-color);
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*------------Inicio sesion----------------*/
+.avatar_titulo{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.avatar_titulo h1{
+    font-family: 'Abel', sans-serif;
+    width: 100%;
+}
+
+.registro_icono {
+    list-style: none;
+    font-size: 22px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+.registro_icono li {
+    border-radius: 10px;
+    position: relative;
+    height: 50px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+.registro_icono li a {
+    border-radius: 10px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.bi-reg {
+    font-size: 22px;
+    color: white;
+}
+
+.i_sesion{
+    margin-right: 270px;
+}
+
+.registro_icono li:hover {
+    opacity: 0.5;
+}
+
+.facebook {
+    background: #3B5998;
+}
+
+.google {
+    background:  #B30000;
+
+}
+
+.apple {
+    background:  black;
+}
+
+.hrs {
+    align-items: center;
+    text-align: center;
+}
+
+.hrLinea {
+    vertical-align: middle;
+    width: 45%;
+    display: inline-block;
+    border: 1px solid #0098DD; 
+}
+
+hr {
+    border: 1px solid #0098DD; 
+}
+
+.form_bot{
+    justify-content: space-evenly;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.form_bot .bi{
+    font-size: 50px;
+}
+
+.form_bot  button {
+    font-size: 0px;
+}
+.reg {
+    color: white;
+}
+
+.formulario {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.caja {
+    border-radius: 10px;
+    width: 90%;
+    position: relative;
+    background:  #0098DD;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+}
+
+::placeholder{
+    color: white;
+    /*text-align: center;*/
+}
+
+.informacion_reg {
+    text-align: center;
+    width: 100%;
+    display: relative;
+}
+
+.informacion_reg22 label {
+    display: none;
+}
+
+.informacion_reg p{
+    font-size: 13px;
+}
+
+.reg{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.reg h2{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.reg .bi{
+    font-size: 50px;
+
+}
+
+.bi {
+    color: #0098DD;
+    font-size: 40px;
+    cursor: pointer;
+}
+.bi-reg {
+    font-size: 22px;
+    color: white;
+}
+
+.reg_pm h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+body.dark_theme #logo{
+    content: url(../images/panda_dark.png);
+}
+
+.main, .header, .footer, .nav{
+    background-color: var(--primary-color);
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.main h1, p, h2, h3, h4{
+    color: var(--secondary-color);
+}
+
+.header h1{
+    color: var(--secondary-color);
+}
+
+/*------------Registro----------------*/
+
+
+
+/* Formato para tablet */
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%; margin-top: 20px; text-align: center;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%; display: flex;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    /*Estilo de la barra de navegación lateral para tablets*/
+    .nav{
+        padding: 0;
+        height: 80%;
+        top:0;
+        left:0;
+        z-index: 1;
+    }
+
+    .navegacion{
+        flex-direction: column;
+    }
+
+    .navegacion li {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    /*Estilo de las secciones de música para tablet*/
+    .main {
+        height: 80vh;
+    }
+
+    /* Estilos de la cabecera + posición sticky paara que se quede fija para todos los formatos */
+    .header {
+        position: sticky;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        font-family: 'Abel', sans-serif;
+    }
+
+    /*Icono tres rayitas*/
+    .bi-list {
+        font-size: 45px;
+    }
+
+    /*Imagen panda*/
+    #logo {
+        width: 90px;
+    }
+
+    /*Logo texto*/
+    #logo_text {
+        font-size: 25px;
+    }    
+    
+    .popup {
+        top: -50px;
+    }
+
+    /* The Close Button */
+    .close {
+        margin-top: 8%;
+    }
+}
+
+/* Formato para desktop */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;
+            margin-top: 20px;
+            text-align: center;
+    }
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;
+            display: flex;
+    }
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    /*Estilo de la barra de navegación para desktop*/
+    /*Navegación (lado izquierda)*/
+
+    .navegacion {
+        display: block;
+        flex-direction: row;
+        list-style: none;
+    }
+
+    .navegacion li {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    /*Icono tres rayitas*/
+    .bi-list {
+        font-size: 50px;
+    }
+
+    /*Imagen panda*/
+    #logo {
+        width: 100px;
+    }
+
+    /*Logo texto*/
+    #logo_text {
+        font-size: 30px;
+    }
+
+    .popup {
+        top: -75px;
+    }
+
+    /* The Close Button */
+    .close {
+        margin-top: 10%;
+    }
+}
