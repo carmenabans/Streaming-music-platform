@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Head donde escribimos el titulo de pagina, los estilos necesarios y las etiquetas necesarias de html5-->
+
+<head>
+    <title>PandaMusic - Playlist</title>
+    <link href="./style/Playlist.css" rel="stylesheet">
+    <!-- Enlace del script de Javascript-->
+    <script src = "./script/Playlist.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>        
+    <!--Estilo de fuentes, Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Monoton&family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Librería de iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body onload="fotoPerfil1()">
+    <!--La primera es un header, dividida en 2 columnas relación 25%-75%./ Contiene icono menu, inicio sesion/imgUser, barra busqueda, logo-->
+    <header class="header">
+        <div class="row">
+            <div class="col-9 col-s-9">
+                <a href="./Home.html"><i class="bi bi-arrow-left-circle"></i></a>
+                <img src="./images/panda_light.png" alt="PandaMusic_Logo" id="logo">
+                <h1 id="logo_text">Panda Music</h1>
+                <a href="./Perfil.html"><img class ="ai" src="./images/avatar_azul.png" alt="Icono de avatar" id="Icono_avatar1"></a>            
+            </div>
+            <div class="col-3 col-s-3">
+            </div>
+        </div>
+    </header>
+
+    <!--La segunda sección de la página es la barra de navegador lateral, que será el 25% de la sección intermedia de la página-->
+    <nav class="col-1 col-s-1 nav">
+        <ul class="navegacion">
+            <li><a href="./Home.html"><i class="bi bi-house" id="home_btn"></i></a></li>
+            <li><a href="./Listas.html"><i class="bi bi-music-note-list" id="biblio_btn"></i></a></li>
+            <li><a href="./Calendario.html"><i class="bi bi-calendar-week" id="calendar_btn"></i></a></li>
+            <li class="crear"><a href="./Playlist_.html"><i class="bi bi-plus-square" id="add_playlist_btn"></i></a></li>
+        </ul>
+    </nav>
+
+    <main class="col-11 col-s-11 main"> 
+        <ul class="linea1">
+            <li><h2 class="nuevaPlaylist">Nueva playlist</h2></li>
+        </ul>
+        <ul>
+            <li class="linea2">
+                <div class="imgplaylist">
+                    <img src="./images/playlists.png" alt="Imagen de la playlist">
+                </div>            
+            </li> 
+        </ul>       
+        <br>
+        <label for="title_list">title_list</label>
+        <input class="nomplaylist caja" type="text" placeholder="Nombre de la playlist" id="title_list">
+        <br>
+        <br>
+        <label for="description">description</label>
+        <input class="descripcion caja" type="text" placeholder="Descripción" id="description">
+        <br>
+        <br>
+        <ul class="linea3">
+            <li><i class="bi bi-plus-circle" onclick="desplegarAñadirMusica()"></i></li>
+            <li><p class="añadirmusica"><strong>Añadir música</strong></p></li>
+        </ul>
+        <div id="desplegable">           
+            <label for="myInput">Input</label>
+            <input id="myInput" type="text" onkeyup="Search()" placeholder="Cancion, artista..." onclick="desplegarOpciones()">
+            <div id="busquedas">
+                <ul id="myUL">
+                    <li><a href="#">
+                        <label for="angels_like_you">angels_like_you</label>
+                        <input type="checkbox" id="angels_like_you" name="cancion" value="angels_like_you">
+                        Angels Like You · Miley Cyrus
+                    </a></li>
+                    <li><a href="#">
+                        <label for="as_it_was">as_it_was</label>
+                        <input type="checkbox" id="as_it_was" name="cancion" value="as_it_was">
+                        As It Was · Harry Styles
+                    </a></li>
+                    <li><a href="#">
+                        <label for="astronaut_in_the_ocean">astronaut_in_the_ocean</label>
+                        <input type="checkbox" id="astronaut_in_the_ocean" name="cancion" value="astronaut_in_the_ocean">
+                        Astronaut In The Ocean · Masked Wolf
+                    </a></li>
+                    <li><a href="#" >
+                        <label for="back_in_black">back_in_black</label>
+                        <input type="checkbox" id="back_in_black" name="cancion" value="back_in_black">
+                        Back In Black · AC/DC
+                    </a></li>
+                    <li><a href="#">
+                        <label for="bam_bam">bam_bam</label>
+                        <input type="checkbox" id="bam_bam" name="cancion" value="bam_bam">
+                        Bam Bam · Camila Cabello ft. Ed Sheeran
+                    </a></li>
+                    <li><a href="#">
+                        <label for="bones">bones</label>
+                        <input type="checkbox" id="bones" name="cancion" value="bones">
+                        Bones · Imagine Dragons
+                    </a></li>
+                    <li><a href="#">
+                        <label for="edamame">edamame</label>
+                        <input type="checkbox" id="edamame" name="cancion" value="edamame">
+                        Edamame · bbno$ ft. Rich Brian
+                    </a></li>
+                    <li><a href="#">
+                        <label for="hold_on">hold_on</label>
+                        <input type="checkbox" id="hold_on" name="cancion" value="hold_on">
+                        Hold on · Justin Bieber
+                    </a></li>
+                    <li><a href="#">
+                        <label for="hotel_california">hotel_california</label>
+                        <input type="checkbox" id="hotel_california" name="cancion" value="hotel_california">
+                        Hotel California · Eagles
+                    </a></li>
+                    <li><a href="#">
+                        <label for="livin_on_a_prayer">livin_on_a_prayer</label>
+                        <input type="checkbox" id="livin_on_a_prayer" name="cancion" value="livin_on_a_prayer">
+                        Livin' On A Player · Bon Jovi
+                    </a></li>
+                    <li><a href="#">
+                        <label for="se_acabo">se_acabo</label>
+                        <input type="checkbox" id="se_acabo" name="cancion" value="se_acabo">
+                        Se Acabo · The Beatnuts ft. Method Man
+                    </a></li>
+                    <li><a href="#">
+                        <label for="smells_like_teen_spirit">smells_like_teen_spirit</label>
+                        <input type="checkbox" id="smells_like_teen_spirit" name="cancion" value="smells_like_teen_spirit">
+                        Smells Like Teen Spirit · Nirvana
+                    </a></li>
+                    <li><a href="#">
+                        <label for="sweet_child_o_mine">sweet_child_o_mine</label>
+                        <input type="checkbox" id="sweet_child_o_mine" name="cancion" value="sweet_child_o_mine">
+                        Sweet Chil O' Mine · Guns N' Roses
+                    </a></li>
+                    <li><a href="#">
+                        <label for="the_loneliest">the_loneliest</label>
+                        <input type="checkbox" id="the_loneliest" name="cancion" value="the_loneliest">
+                        The Loneliest · Måneskin
+                    </a></li>
+                    <li><a href="#">
+                        <label for="till_i_collapse">eminem</label>
+                        <input type="checkbox" id="till_i_collapse" name="cancion" value="eminem">
+                        Till I Collapse · Eminem
+                    </a></li>
+                    <li><a href="#">
+                        <label for="tyler_herro">tyler_herro</label>
+                        <input type="checkbox" id="tyler_herro" name="cancion" value="tyler_herro">
+                        Tyler Herro · Jack Harlow
+                    </a></li>
+                    <li><a href="#">
+                        <label for="unholy">unholy</label>
+                        <input type="checkbox" id="unholy" name="cancion" value="unholy">
+                        Unholy · Sam Smith ft. Kim Petras
+                    </a></li>
+                </ul>
+            </div>
+            <a href="./Listas.html"><i id="btn_check" class="bi bi-check-circle"></i></a>
+        </div>     
+
+    </main>
+
+    <!-- Footer/Reproductor-->
+    <footer class="footer">
+        <ul class="navegacion">
+            <li><a href="./Home.html"><i class="bi bi-house"></i></a></li>
+            <li><a href="./Listas.html"><i class="bi bi-music-note-list"></i></a></li>
+            <li><a href="./Calendario.html"><i class="bi bi-calendar-week"></i></a></li>
+            <li class="crear"><a href="./Playlist_.html"><i class="bi bi-plus-square"></i></a></li>
+        </ul>        
+    </footer>
+
+    <!-- Enlace del script de Javascript-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="script/Playlist.js"></script>
+    
+</body>
+
+
+</html>

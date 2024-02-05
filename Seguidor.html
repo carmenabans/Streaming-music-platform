@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Head donde escribimos el titulo de pagina, los estilos necesarios y las etiquetas necesarias de html5-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PandaMusic - Seguidor</title>
+    <link href="./Style/Perfil.css" rel="stylesheet">
+    <!--Estilo de fuentes, Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Monoton&family=Staatliches&display=swap"
+        rel="stylesheet">
+    <!-- Librería de iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="fotoPerfil1()">
+    <!--La primera es un header, dividida en 2 columnas relación 25%-75%./ Contiene icono menu, inicio sesion/imgUser, barra busqueda, logo-->
+    <header class="header">
+        <div class="row">
+            <div class="col-9 col-s-9">
+                <a href="./Home.html"><i class="bi bi-arrow-left-circle"></i></a>
+                <img src="./images/panda_light.png" alt="PandaMusic_Logo" id="logo">
+                <h1 id="logo_text">Panda Music</h1>
+                <a href="./Perfil.html"><img class ="ai" src="./images/avatar_azul.png" alt="Icono de avatar" id="Icono_avatar"></a>              
+            </div>
+            <div class="col-3 col-s-3">
+            </div>
+        </div>
+    </header>
+
+    <!--La segunda sección de la página es la barra de navegador lateral, que será el 25% de la sección intermedia de la página-->
+    
+    <nav class="col-1 col-s-1 nav">
+        <ul class="navegacion">
+            <li><a href="./Home.html"><i class="bi bi-house"></i></a></li>
+            <li><a href="./Listas.html"><i class="bi bi-music-note-list"></i></a></li>
+            <li><a href="./Calendario.html"><i class="bi bi-calendar-week"></i></a></li>
+            <li><a href="./Playlist_.html"><i class="bi bi-plus-square"></i></a></li>
+        </ul>
+    </nav>
+
+    <main class="col-11 col-s-11 main"> 
+        <div id="nombre">
+            <img src="./images/hombre(1).png" alt="Imagen de perfil">
+            <h2>Manuel F.</h2>
+        </div>
+
+        <br>
+        <div id="info_usuario">
+            <p>3<br> <strong> Playlists</strong></p>
+            <p>45<br><strong>Seguidores</strong></p>
+            <p>89<br><strong>Siguiendo</strong></p>
+            <p>230<br><strong>Canciones</strong></p>
+        </div>
+
+        <br><br>
+        <div class="playlist">
+            <h3>Tus Playlists</h3>
+            <br>
+            <div class="pl">
+                <img src="./images/country.jpg" alt="Imagen de route 66">
+                <a href="./Playlist1.html"><p class="pl_nom"><strong>Playlist 1 - Route 66</strong> <br> Country, chill</p></a>
+            </div>
+            <br>
+            <div class="pl">
+                <img src="./images/study.jpg" alt="Imagen de pop">
+                <a href="./Playlist1.html"><p class="pl_nom"><strong>Playlist 2 - Study</strong> <br> Pop, Relax</p></a>
+            </div>
+            <br>
+            <div class="pl">
+                <img src="./images/gym.jpg" alt="Imagen de rap">
+                <a href="./Playlist1.html"><p class="pl_nom"><strong>Playlist 3 - Gym</strong> <br> Reggeaton</p></a>
+            </div>
+        </div>
+
+        <br><br>
+        <div class="playlist">
+            <h3>Tus Canciones Favoritas</h3>
+            <br>
+            <div class="pl">
+                <div class="img_play">
+                    <img src="./images/unholy.png" alt="Portada Unholy">
+                    <i class="bi bi-play-circle-fill"></i>
+                </div>
+                <p><strong>Unholy</strong> <br> Sam Smith ft. Kim Petras</p>
+                <i class="bi bi-heart-fill"></i>
+            </div>
+            <br>
+            <div class="pl">
+                <div class="img_play">
+                    <img src="./images/till_i_collapse.jpg" alt="Portada Till I Collapse">
+                    <i class="bi bi-play-circle-fill"></i>
+                </div>
+                <p><strong>Till I Collapse</strong> <br> Eminem</p>
+                <i class="bi bi-heart-fill"></i>
+            </div>
+            <br>
+            <div class="pl">
+                <div class="img_play">
+                    <img src="./images/hold_on.jpg" alt="Portada Hold On">
+                    <i class="bi bi-play-circle-fill"></i>
+                </div>
+                <p><strong>Hold On</strong> <br> Justin Bieber</p>
+                <i class="bi bi-heart-fill"></i>
+            </div>
+        </div>
+
+        <br><br>
+        <h3 class="titulo">Siguiendo</h3>
+        <br>
+        <div class="artistas">
+            <br>
+            <div class="art">
+                <a href="./Autor.html"><img src="./images/taylor.jpg" alt="Imagen de Taylor Swift"></a>
+                <br>
+                <p><strong>Taylor Swift</strong> <br> Artista</p>
+            </div>
+            <br>
+            <div class="art">
+                <a href="./Autor.html"><img src="./images/ed.jpeg" alt="Imagen de Ed Sheeran"></a>
+                <br>
+                <p><strong>Ed Sheeran</strong> <br>Artista</p>
+            </div>
+            <br>
+            <div class="art">
+                <a href="./Autor.html"><img src="./images/aitana.jpg" alt="Imagen de Aitana"></a>
+                <br>
+                <p><strong>Aitana</strong> <br> Artista</p>
+            </div>
+        </div>
+
+        <br><br>
+        <h3 class="titulo">Seguidores</h3>
+        <br>
+        <div class="artistas">
+            <br>
+            <div class="art">
+                <a href="./Seguidor.html"><img src="./images/mujer.png" alt="Imagen de avatar hombre"></a>
+                <br>
+                <p><strong>Alejandra F.</strong> <br> Seguidor</p>
+            </div>
+            <br>
+            <div class="art">
+                <a href="./Seguidor.html"><img src="./images/mujer(1).png" alt="Imagen de avtar mujer"></a>
+                <br>
+                <p><strong>Lucía M.</strong> <br>Seguidor</p>
+            </div>
+            <br>
+            <div class="art">
+                <a href="./Seguidor.html"><img src="./images/hombre.png" alt="Imagen de avatar hombre"></a>
+                <br>
+                <p><strong>Carlos H.</strong> <br> Seguidor</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </main>
+
+    <footer class="footer">
+        <ul class="navegacion">
+            <li><a href="./Home.html"><i class="bi bi-house"></i></a></li>
+            <li><a href="./Listas.html"><i class="bi bi-music-note-list"></i></a></li>
+            <li><a href="./Calendario.html"><i class="bi bi-calendar-week"></i></a></li>
+            <li><a href="./Playlist_.html"><i class="bi bi-plus-square"></i></a></li>
+        </ul> 
+    </footer>
+
+
+    <!-- Enlace del script de Javascript-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="script/perfil.js"></script>
+    <script src="script/Player.js"></script>
+</body>
+
+
+</html>

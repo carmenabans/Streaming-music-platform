@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Head donde escribimos el titulo de pagina, los estilos necesarios y las etiquetas necesarias de html5-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PandaMusic - Inicio Sesión</title>
+    <link href="./Style/Home_No_Cuenta.css" rel="stylesheet">
+    <!--Estilo de fuentes, Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Monoton&family=Staatliches&display=swap"
+        rel="stylesheet">
+    <!-- Librería de iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!--La primera es un header, dividida en 2 columnas relación 25%-75%./ Contiene icono menu, inicio sesion/imgUser, barra busqueda, logo-->
+    <header class="header">
+        <div class="row">
+            <div class="col-10 col-s-10">
+                <i id="menu" class="bi bi-list"></i>
+                <img src="./images/panda_light.png" alt="PandaMusic_Logo" id="logo">
+                <h1 id="logo_text">Panda Music</h1>
+            </div>
+
+            <div class="col-2 col-s-2">
+                <button class="inicioSesion" id="log_in_btn" onclick="inicioSesion()"><strong> Iniciar Sesión </strong></button><!--Hay que linkear con registro-->
+            </div>
+        </div>
+    </header>
+
+    <!--La segunda sección de la página es la barra de navegador lateral, que será el 25% de la sección intermedia de la página-->
+    <nav class="col-1 col-s-1 nav">
+        <ul class="navegacion">
+            <li><a><i class="bi bi-house" id="home_btn"></i></a></li>
+            <li><a><i class="bi bi-music-note-list" id="biblio_btn"></i></a></li>
+            <li><a><i class="bi bi-calendar-week" id="calendar_btn"></i></a></li>
+            <li><a><i class="bi bi-plus-square" id="add_playlist_btn"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="popup" id="popup1">
+        <span onclick="inicioSesion()" class="close">&times;</span>
+        <div class="popup-content">
+            <div class = "avatar_titulo">
+                <h1 class="i_sesion">Iniciar Sesión</h1>
+            </div>
+            <br><br>
+            <ul class="registro_icono">
+                <li class="google">
+                    <a href="#" class="login"><i class="bi bi-google bi-reg"></i>   Regístrese con Google</a>
+                    <br><br>
+                </li>
+                <li class="facebook">
+                    <a href="#" class="login"><i class="bi bi-facebook bi-reg"></i>   Regístrese con Facebook</a>
+                    <br><br>
+                </li>
+                <li class="apple">
+                    <a href="#" class="login"><i class="bi bi-apple bi-reg"></i>   Regístrese con Apple</a>
+                    <br><br><br>
+                </li>
+            </ul>
+            <div class="hrs">
+                <hr class="hrLinea"> O <hr class="hrLinea">
+            </div>
+            <br>
+            <div class="form_bot">
+                <form method="POST" class="informacion_reg" onsubmit= "checkCookie1(event)">
+                    <label for="correo1" class="formulario color"><strong>Correo electrónico:</strong></label>
+                    <br>
+                    <br>
+                    <input type = "text" name="correo1" id="correo1" placeholder="Escriba su correo electrónico" required class="caja">
+                    <br>
+                    <br>
+                    <label for="contrasena" class="formulario color"><strong>Contraseña:</strong></label>
+                    <br>
+                    <br>
+                    <input type="password" name="contrasena" id="contrasena" required placeholder="Escriba su contraseña" class="caja">
+                    <br>
+                    <br>            
+                    <button id="boton">.<i class="bi bi-arrow-right-circle"></i></button>
+                </form>
+                <br>
+                <br>
+            </div>
+            <hr>
+            <br>
+            <br>
+            <div class="reg">
+                <h2><strong>¿No tienes cuenta? Registrate en PandaMusic</strong></h2>
+                <button id="boton" onclick="registroRS()">.<i class="bi bi-box-arrow-in-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup2">
+        <span class="close" onclick="registroRS()">&times;</span>
+        <div class="popup-content">
+            <div class = "avatar_titulo">
+                <h1><strong>Una cuenta, toda tu música</strong></h1>
+            </div>
+            <br><br>
+            <ul class="registro_icono">
+                <li class="google">
+                    <a href="#" class="login"><i class="bi bi-google bi-reg"></i>   Regístrese con Google</a>
+                    <br><br>
+                </li>
+                <li class="facebook">
+                    <a href="#" class="login"><i class="bi bi-facebook bi-reg"></i>   Regístrese con Facebook</a>
+                    <br><br>
+                </li>
+                <li class="apple">
+                    <a href="#" class="login"><i class="bi bi-apple bi-reg"></i>   Regístrese con Apple</a>
+                    <br><br><br>
+                </li>
+            </ul>
+            <div class="hrs">
+                <hr class="hrLinea"> O <hr class="hrLinea">
+            </div>
+            <ul>
+                <li class="reg_pm">
+                    <h1>   Regístrese con PandaMusic</h1>
+                    <br><br>
+                </li>
+            </ul>
+            <div class="todo"> 
+                <form  method="POST" onsubmit= "checkCookie(event)" >
+                    <div  class="informacion_reg informacion_reg22"> 
+                        <label for="nombre_us">Nombre usuario</label>
+                        <input type="text" name="nombre_us" id="nombre_us" placeholder= "Nombre usuario" required class="caja">
+                        <br>
+                        <br>
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo" placeholder="Correo eléctronico" required class="caja">
+                        <br>
+                        <br>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required class="caja">
+                        <br>
+                        <br>
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required class="caja">
+                        <br>
+                        <br>
+                        <label for="fecha">fecha</label>
+                        <input type="date" name="fecha" id="fecha" required class="caja">
+                        <br>
+                        <br>
+                        <label for="nueva_contra">Contraseña</label>
+                        <input type ="password" name="contrasena2" id="nueva_contra" minlength="8"  maxlength = "16" pattern = "[a-zA-Z0-9]+" placeholder="Contraseña" class="caja">
+                        <br>
+                        <br>
+                        <label for="foto_perfil">Foto de perfil</label>
+                        <input type="text" id="foto_perfil" name="foto_perfil" class="caja" placeholder="Foto de perfil (Inserte un link)">
+                        <br><br><br><br>
+                    </div>
+    
+                    <div class="enviar">
+                        <input type="submit" id = "Modificar_cuenta" value="CREAR CUENTA" class="caja1">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <main class="col-11 col-s-11 main"> 
+        <!--Cada sección tiene las imagenes, canciones y descripciones correspondientes de cada canción-->
+        <h2>Últimos lanzamientos</h2>
+        <ul>
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/the_loneliest.jpeg" alt="Portada The Loneliest">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>The Loneliest</strong><br>Måneskin</p>
+            </li>
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/monotonia.jpg" alt="Portada Monotonía">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Monotonía</strong><br>Shakira ft. Ozuna</p>
+            </li>
+
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/just_wanna_rock.jpg" alt="Portada Just Wanna Rock">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Just Wanna Rock</strong><br>Lil Uzi Vert</p>
+            </li>
+
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/unholy.png" alt="Portada Unholy">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Unholy</strong><br>Sam Smith ft. Kim Petras</p>
+            </li>
+
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/let_it_die.png" alt="Portada Let It Die">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Let It Die</strong><br>Ellie Goulding</p>
+            </li>
+
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/duki.png" alt="Portada Duki">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Bzrp Music Sessions, Vol 50</strong><br>Duki ft. Bizarrap</p>
+            </li>
+        </ul>
+        <br><br>
+        <h2>Rock Classics</h2>
+        <ul>
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/sweet_child_o_mine.jpg" alt="Portada Sweet Child O' Mine">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Sweet Child O' Mine</strong><br>Guns N' Roses</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/livin_on_a_prayer.jpg" alt="Portada Livin' On a Prayer">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Livin' On A Prayer</strong><br>Bon Jovi</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/hotel_california.jpg" alt="Portada Hotel California">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Hotel California</strong><br>Eagles</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/back_in_black.png" alt="Portada Back in Black">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Back In Black</strong><br>AC/DC</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/smells_like_teen_spirit.jpg" alt="Portada Smells Like Teen Spirit">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Smells Like Teen Spirit</strong><br>Nirvana</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/whish_you_were_here.jpg" alt="Portada Whish you where Here">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Wish You Were Here</strong><br>Pink Floyd</p>
+            </li>
+        </ul>
+        <br><br>
+        <h2>Pop Hits</h2>
+        <ul>
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/as_it_was.jpg" alt="Portada As It Was">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>As It Was</strong><br>Harry Styles</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/bam_bam.jpg" alt="Portada Bam Bam">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Bam Bam</strong><br>Camila Cabello ft. Ed Sheeran</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/hold_on.jpg" alt="Portada Hold On">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Hold On</strong><br>Justin Bieber</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/angels_like_you.jpg" alt="Portada Angels Like You">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Angels Like You</strong><br>Miley Cyrus</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/bones.png" alt="Portada Bones">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Bones</strong><br>Imagine Dragons</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/cuff_it.jpg" alt="Portada Cuff It">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Cuff It</strong><br>Beyoncé</p>
+            </li>
+        </ul>
+        <br><br>
+        <h2>RAP</h2>
+        <ul>
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/astronaut_in_the_ocean.jpg" alt="Portada Astronaut In The Ocean">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Austronaut In The Ocean</strong><br>Masked Wolf</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/edamame.jpg" alt="Portada Edamame">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Edamame</strong><br>bbno$ ft. Rich Brian</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/tyler_herro.jpg" alt="Portada Tyler Herro">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Tyler Herro</strong><br>Jack Harlow</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/se_acabo.jpg" alt="Portada Se Acabo">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Se Acabo</strong><br>The Beatnuts ft. Method Man</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/till_i_collapse.jpg" alt="Portada Till I Collapse">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Till I Collapse</strong><br>Eminem</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/buss_down.jpg" alt="Portada Buss Down">
+                    <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                </div>
+                <p><strong>Buss Down</strong><br>Aitch, ZieZie</p>
+            </li>
+        </ul>
+    </main>
+
+    <!-- Footer/Reproductor-->
+    <footer class="footer">
+        <p><strong>Una app para fanáticos de la música, regístrate ya para disfrutar de tus playlists y canciones favoritas en Panda Music</strong></p>
+        <button id = "register_btn" onclick="registroRS()">Registrarte</button><!--Hay que linkear-->
+    </footer>
+
+    <!-- Enlace del script de Javascript-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="script/Home_No_Cuenta.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Head donde escribimos el titulo de pagina, los estilos necesarios y las etiquetas necesarias de html5-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PandaMusic - Autor</title>
+    <link href="./Style/Autor.css" rel="stylesheet">
+    <!--Estilo de fuentes, Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Monoton&family=Staatliches&display=swap"
+        rel="stylesheet">
+    <!-- Librería de iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="fotoPerfil1()">
+    <!--La primera es un header, dividida en 2 columnas relación 25%-75%./ Contiene icono menu, inicio sesion/imgUser, barra busqueda, logo-->
+    <header class="header">
+        <div class="row">
+            <div class="col-9 col-s-9">
+                <a href="./Home.html"><i class="bi bi-arrow-left-circle"></i></a>
+                <img src="./images/panda_light.png" alt="PandaMusic_Logo" id="logo">
+                <h1 id="logo_text">Panda Music</h1>
+                <a href="./Perfil.html"><img class ="ai" src="./images/avatar_azul.png" alt="Icono de avatar" id="Icono_avatar1"></a>
+            </div>
+            <div class="col-3 col-s-3">
+            </div>
+        </div>
+    </header>
+
+    <!--La segunda sección de la página es la barra de navegador lateral, que será el 25% de la sección intermedia de la página-->
+    
+    <nav class="col-1 col-s-1 nav">
+        <ul class="navegacion">
+            <li><a href="./Home.html"><i class="bi bi-house" id="home_btn"></i></a></li>
+            <li><a href="./Listas.html"><i class="bi bi-music-note-list" id="biblio_btn"></i></a></li>
+            <li><a href="./Calendario.html"><i class="bi bi-calendar-week" id="calendar_btn"></i></a></li>
+            <li><a href="./Playlist_.html"><i class="bi bi-plus-square" id="add_playlist_btn"></i></a></li>
+        </ul>
+    </nav>
+
+    <main class="col-11 col-s-11 main"> 
+        <div class="cabecera">
+            <div class="verificado">
+                <i class="bi bi-patch-check-fill"></i>
+                <h3>
+                    Artista Verificado<br><br>
+                </h3>
+            </div>
+            <ul>
+                <li>
+                    <img src="./images/maneskin-portada.jpg" alt="Portada Novedades">
+                    <div id="nombre">
+                        <h2>Måneskin</h2>
+                        <h3>23.323.411 oyentes mensuales</h3>
+                        <button type="button" id="botonSeguir" class="button1"> Seguir </button>
+                    </div>
+                </li>
+            </ul>
+        </div> 
+        <br><hr id="hr"> <br> <br>
+
+        <div class="discografica">
+            <h2>Discográfica</h2>
+            <ul>
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/the_loneliest.jpeg" alt="Portada The Loneliest">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>THE LONELIEST</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/If_I_Can_Dream.jpg" alt="Portada Monotonía">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>If I Can Dream</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/supermodel.jpg" alt="Portada Just Wanna Rock">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>SUPERMODEL</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/mammamia.jpg" alt="Portada Unholy">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>MAMMAMIA</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/I_WANNA_BE_YOUR_SLAVE.jpg" alt="Portada Let It Die">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>I WANNA BE YOUR SLAVE (with Iggy Pop)</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/Teatro-d-ira-Volume-I.jpg" alt="Portada Duki">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>Teatro d'ira - Vol.I</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/ZITTI_E_BUONI.jpg" alt="Portada Duki">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>ZITTI E BUONI</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/beggin.jpg" alt="Portada Duki">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>Beggin' (Live)</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/vent_anni.jpg" alt="Portada Duki">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>VENT'ANNI</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/il_ballo_della_vita.jpg" alt="Portada Duki">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>Il ballo della vitta</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/torna_a_casa.jpg" alt="Portada Duki">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>Torna a casa</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/Moriro_da_re_-_Maneskin.jpg" alt="Portada Duki">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>Morirò da Re</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/chosen.jpg" alt="Portada Duki">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>Chosen</strong></p>
+                </li>
+
+                <li class="disc_Maneskin">
+                    <div class="img_play">
+                        <img src="./images/chosen-s.jpg" alt="Portada Duki">
+                        <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                    </div>
+                    <p><strong>Chosen</strong></p>
+                </li>
+            </ul>
+
+        </div>
+        <br>
+        <div class="bckg_white">
+            <div class="populares">
+                <h2>Populares</h2>
+                <ul class="pop_container">
+                    <li class="pop_Maneskin">
+                        <h4 id="canc_1">1</h4>
+                        <div class="img_play">
+                            <img src="./images/the_loneliest.jpeg" alt="Portada The Loneliest">
+                            <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                        </div>
+                        <p><strong>THE LONELIEST</strong></p>
+                    </li>
+
+                    <li class="pop_Maneskin">
+                        <h4 id="canc_2">2</h4>
+                        <div class="img_play">
+                            <img src="./images/If_I_Can_Dream.jpg" alt="Portada Monotonía">
+                            <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                        </div>
+                        <p><strong>If I Can Dream</strong></p>
+                    </li>
+
+                    <li class="pop_Maneskin">
+                        <h4 id="canc_3">3</h4>
+                        <div class="img_play">
+                            <img src="./images/supermodel.jpg" alt="Portada Just Wanna Rock">
+                            <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                        </div>
+                        <p><strong>SUPERMODEL</strong></p>
+                    </li>
+
+                    <li class="pop_Maneskin">
+                        <h4 id="canc_4">4</h4>
+                        <div class="img_play">
+                            <img src="./images/mammamia.jpg" alt="Portada Unholy">
+                            <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                        </div>
+                        <p><strong>MAMMAMIA</strong></p>
+                    </li>
+
+                    <li class="pop_Maneskin">
+                        <h4 id="canc_5"><strong>5</strong></h4>
+                        <div class="img_play">
+                            <img src="./images/I_WANNA_BE_YOUR_SLAVE.jpg" alt="Portada Let It Die">
+                            <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                        </div>
+                        <p><strong>I WANNA BE YOUR SLAVE (with Iggy Pop)</strong></p>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="nuevos_lzm">
+                <h2>Nuevos Lanzamientos</h2>
+                <ul class="nuevos_lzm_container">
+                    <li class="nuevos_lzm_Maneskin">
+                        <div class="img_play">
+                            <img src="./images/the_loneliest.jpeg" alt="Portada The Loneliest">
+                            <i class="bi bi-play-circle-fill" onclick="alerta()"></i>
+                        </div>
+                        <p><strong>THE LONELIEST · Sencillo</strong></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <footer class="footer">
+        <ul class="navegacion">
+            <li><a href="./Home.html"><i class="bi bi-house"></i></a></li>
+            <li><a href="./Listas.html"><i class="bi bi-music-note-list"></i></a></li>
+            <li><a href="./Calendario.html"><i class="bi bi-calendar-week"></i></a></li>
+            <li><a href="./Playlist_.html"><i class="bi bi-plus-square"></i></a></li>
+        </ul> 
+    </footer>
+
+
+    <!-- Enlace del script de Javascript-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="script/perfil.js"></script>
+    <script src="script/Player.js"></script>
+    <script src="script/cuenta.js"></script>
+    <script src="script/Autor.js"></script>
+</body>
+
+
+</html>

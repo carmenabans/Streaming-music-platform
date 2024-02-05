@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Head donde escribimos el titulo de pagina, los estilos necesarios y las etiquetas necesarias de html5-->
+
+<head>
+    <title>PandaMusic - Reproductor de música web</title>
+    <link href="./style/Home.css" rel="stylesheet">
+    <!-- Enlace del script de Javascript-->
+    <script src = "./script/Home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>        
+    <!--Estilo de fuentes, Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Monoton&family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Librería de iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body onload="fotoPerfil()">
+    <!--La primera es un header, dividida en 2 columnas relación 25%-75%./ Contiene icono menu, inicio sesion/imgUser, barra busqueda, logo-->
+    <header class="header">
+        <div class="row">
+            <div class="col-9 col-s-9">
+                <a href="./Cuenta.html"><i id="menu" class="bi bi-list"></i></a>
+                <img src="./images/panda_light.png" alt="PandaMusic_Logo" id="logo">
+                <h1 id="logo_text">Panda Music</h1>
+                <a href="./Perfil.html"><img class ="ai" src="./images/avatar_azul.png" alt="Icono de avatar" id="Icono_avatar"></a>              
+            </div>
+            <div class="col-3 col-s-3">
+                <label for="myInput">label</label>
+                <input id="myInput" type="text" onkeyup="Search()" placeholder="Cancion, artista..." onclick="desplegarOpciones()">
+                <div id="busquedas">
+                    <ul id="myUL">
+                        <li><a href="#">
+                            
+                            Angels Like You · Miley Cyrus
+                            <i class="bi bi-play-circle" id="play15" onclick="playthistrack2(15)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            As It Was · Harry Styles
+                            <i class="bi bi-play-circle" id="play12" onclick="playthistrack2(12)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Austronaut In The Ocean · Masked Wolf
+                            <i class="bi bi-play-circle" id="play18" onclick="playthistrack2(18)" ></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Back In Black · AC/DC
+                            <i class="bi bi-play-circle" id="play9" onclick="playthistrack2(9)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Bam Bam · Camila Cabello ft. Ed Sheeran
+                            <i class="bi bi-play-circle" id="play13" onclick="playthistrack2(13)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Bones · Imagine Dragons
+                            <i class="bi bi-play-circle" id="play16" onclick="playthistrack2(16)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Buss Down · Aitch, ZieZie
+                            <i class="bi bi-play-circle" id="play23" onclick="playthistrack2(23)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Bzrp Music Sessions, Vol 50 · Duki ft. Bizarrap
+                            <i class="bi bi-play-circle" id="play5" onclick="playthistrack2(5)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Cuff It · Beyoncé
+                            <i class="bi bi-play-circle" id="play17" onclick="playthistrack2(17)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Edamame · bbno$ ft. Rich Brian
+                            <i class="bi bi-play-circle" id="play19" onclick="playthistrack2(19)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Hold on · Justin Bieber
+                            <i class="bi bi-play-circle" id="play14" onclick="playthistrack2(14)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Hotel California · Eagles
+                            <i class="bi bi-play-circle" id="play8" onclick="playthistrack2(8)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Just Wanna Rock · Lil Uzi Vert
+                            <i class="bi bi-play-circle" id="play2" onclick="playthistrack2(2)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Let It Die · Ellie Goulding
+                            <i class="bi bi-play-circle" id="play4" onclick="playthistrack2(4)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Livin' On A Player · Bon Jovi
+                            <i class="bi bi-play-circle" id="play7" onclick="playthistrack2(7)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Monotonía · Shakira ft. Ozuna
+                            <i class="bi bi-play-circle" id="play1" onclick="playthistrack2(1)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Se Acabo · The Beatnuts ft. Method Man
+                            <i class="bi bi-play-circle" id="play21" onclick="playthistrack2(21)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Smells Like Teen Spirit · Nirvana
+                            <i class="bi bi-play-circle" id="play10" onclick="playthistrack2(10)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Sweet Child O' Mine · Guns N' Roses
+                            <i class="bi bi-play-circle" id="play6" onclick="playthistrack2(6)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            The Loneliest · Måneskin
+                            <i class="bi bi-play-circle" id="play0" onclick="playthistrack2(0)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Till I Collapse · Eminem
+                            <i class="bi bi-play-circle" id="play22" onclick="playthistrack2(22)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Tyler Herro · Jack Harlow
+                            <i class="bi bi-play-circle" id="play20" onclick="playthistrack2(20)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Unholy · Sam Smith ft. Kim Petras
+                            <i class="bi bi-play-circle" id="play3" onclick="playthistrack2(3)"></i>
+                        </a></li>
+                        <li><a href="#">
+                            
+                            Wish You Were Here · Pink Floyd
+                            <i class="bi bi-play-circle" id="play11" onclick="playthistrack2(11)"></i>
+                        </a></li>
+                    </ul>
+                    </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!--La segunda sección de la página es la barra de navegador lateral, que será el 25% de la sección intermedia de la página-->
+    <nav class="col-1 col-s-1 nav">
+        <ul class="navegacion">
+            <li class="home"><a href="./Home.html"><i class="bi bi-house" id="home_btn"></i></a></li>
+            <li><a href="./Listas.html"><i class="bi bi-music-note-list" id="biblio_btn"></i></a></li>
+            <li><a href="./Calendario.html"><i class="bi bi-calendar-week" id="calendar_btn"></i></a></li>
+            <li><a href="./Playlist_.html"><i class="bi bi-plus-square" id="add_playlist_btn"></i></a></li>
+        </ul>
+    </nav>
+
+    <main class="col-11 col-s-11 main"> 
+        <!--Cada sección tiene las imagenes, canciones y descripciones correspondientes de cada canción-->
+        <h2>Últimos lanzamientos</h2>
+        <ul>
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/the_loneliest.jpeg" alt="Portada The Loneliest">
+                    <i class="bi bi-play-circle-fill" id="0" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart-fill" id="the_loneliest" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <div class="share">
+                    <p><strong>The Loneliest</strong><br>Måneskin</p>
+                    <i class="bi bi-share-fill" onclick="compartir()"></i>
+                </div>
+                <div class="copy_link" id="copiar">
+                    <label for="label1">label1</label>
+                    <input id="label1" type="text" class="copy_link_input" value="https://www.youtube.com/watch?v=odWKEfp2QMY">
+                    <button class="copy_link_button">
+                        .
+                        <i class="bi bi-clipboard2-plus"></i>
+                    </button>
+                </div>
+            </li>
+
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/monotonia.jpg" alt="Portada Monotonía">
+                    <i class="bi bi-play-circle-fill" id="1" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="monotonia" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <div class="share">
+                    <p><strong>Monotonía</strong><br>Shakira ft. Ozuna</p>
+                    <i class="bi bi-share-fill" onclick="compartir2()"></i>
+                </div>
+                <div class="copy_link" id="copiar2">
+                    <label for="label2">label</label>
+                    <input id="label2" type="text" class="copy_link_input" value="https://www.youtube.com/watch?v=j5y6xLpRwx4">
+                    <button class="copy_link_button">
+                        .
+                        <i class="bi bi-clipboard2-plus"></i>
+                    </button>
+                </div>
+            </li>
+
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/just_wanna_rock.jpg" alt="Portada Just Wanna Rock">
+                    <i class="bi bi-play-circle-fill" id="2" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="just_wanna_rock" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <div class="share">
+                    <p><strong>Just Wanna Rock</strong><br>Lil Uzi Vert</p>
+                    <i class="bi bi-share-fill"  onclick="compartir3()"></i>
+                </div>
+                <div class="copy_link" id="copiar3">
+                    <label for="label3">label3</label>
+                    <input id="label3" type="text" class="copy_link_input" value="https://www.youtube.com/watch?v=UhbixyxgsiU">
+                    <button class="copy_link_button">
+                        .
+                        <i class="bi bi-clipboard2-plus"></i>
+                    </button>
+                </div>
+            </li>
+
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/unholy.png" alt="Portada Unholy">
+                    <i class="bi bi-play-circle-fill" id="3" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="unholy" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <div class="share">
+                    <p><strong>Unholy</strong><br>Sam Smith ft. Kim Petras</p>
+                    <i class="bi bi-share-fill"  onclick="compartir4()"></i>
+                </div>
+                <div class="copy_link" id="copiar4">
+                    <label for="label4">label4</label>
+                    <input id="label4" type="text" class="copy_link_input" value="https://www.youtube.com/watch?v=Uq9gPaIzbe8">
+                    <button class="copy_link_button">
+                        .
+                        <i class="bi bi-clipboard2-plus"></i>
+                    </button>
+                </div>
+            </li>
+
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/let_it_die.png" alt="Portada Let It Die">
+                    <i class="bi bi-play-circle-fill" id="4" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="let_it_die" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <div class="share">
+                    <p><strong>Let It Die</strong><br>Ellie Goulding</p>
+                    <i class="bi bi-share-fill"  onclick="compartir5()"></i>
+                </div>
+                <div class="copy_link" id="copiar5">
+                    <label for="label5">label</label>
+                    <input id="label5" type="text" class="copy_link_input" value="https://www.youtube.com/watch?v=ivvBb-SOnRA">
+                    <button class="copy_link_button">
+                        .
+                        <i class="bi bi-clipboard2-plus"></i>
+                    </button>
+                </div>
+            </li>
+
+            <li class="ult_lanz">
+                <div class="img_play">
+                    <img src="./images/duki.png" alt="Portada Duki">
+                    <i class="bi bi-play-circle-fill" id="5" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="duki" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <div class="share">
+                    <p><strong>Bzrp Music Sessions, Vol 50</strong><br>Duki ft. Bizarrap</p>
+                    <i class="bi bi-share-fill"  onclick="compartir6()"></i>
+                </div>
+                <div class="copy_link" id="copiar6">
+                    <label for="label6">label6</label>
+                    <input id="label6" type="text" class="copy_link_input" value="https://www.youtube.com/watch?v=Gzs60iBgd3E">
+                    <button class="copy_link_button">
+                        .
+                        <i class="bi bi-clipboard2-plus"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
+        <br><br>
+        <h2>Rock Classics</h2>
+        <ul id="rock_list">
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/sweet_child_o_mine.jpg" alt="Portada Sweet Child O' Mine">
+                    <i class="bi bi-play-circle-fill" id="6" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="sweet_child_o_mine" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Sweet Child O' Mine</strong><br>Guns N' Roses</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/livin_on_a_prayer.jpg" alt="Portada Livin' On a Prayer">
+                    <i class="bi bi-play-circle-fill" id="7" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="livin_on_a_prayer" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Livin' On A Prayer</strong><br>Bon Jovi</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/hotel_california.jpg" alt="Portada Hotel California">
+                    <i class="bi bi-play-circle-fill" id="8" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="hotel_california" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Hotel California</strong><br>Eagles</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/back_in_black.png" alt="Portada Back in Black">
+                    <i class="bi bi-play-circle-fill" id="9" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="back_in_black" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Back In Black</strong><br>AC/DC</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/smells_like_teen_spirit.jpg" alt="Portada Smells Like Teen Spirit">
+                    <i class="bi bi-play-circle-fill" id="10" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="smells_like_teen_spirit" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Smells Like Teen Spirit</strong><br>Nirvana</p>
+            </li>
+
+            <li class="rock">
+                <div class="img_play">
+                    <img src="./Images/whish_you_were_here.jpg" alt="Portada Whish you where Here">
+                    <i class="bi bi-play-circle-fill" id="11" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="whish_you_were_here" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Wish You Were Here</strong><br>Pink Floyd</p>
+            </li>
+        </ul>
+        <br><br>
+        <h2>Pop Hits</h2>
+        <ul>
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/as_it_was.jpg" alt="Portada As It Was">
+                    <i class="bi bi-play-circle-fill" id="12" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart-fill" id="as_it_was" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>As It Was</strong><br>Harry Styles</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/bam_bam.jpg" alt="Portada Bam Bam">
+                    <i class="bi bi-play-circle-fill" id="13" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="bam_bam" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Bam Bam</strong><br>Camila Cabello ft. Ed Sheeran</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/hold_on.jpg" alt="Portada Hold On">
+                    <i class="bi bi-play-circle-fill" id="14" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="hold_on" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Hold On</strong><br>Justin Bieber</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/angels_like_you.jpg" alt="Portada Angels Like You">
+                    <i class="bi bi-play-circle-fill" id="15" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="angels_like_you" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Angels Like You</strong><br>Miley Cyrus</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/bones.png" alt="Portada Bones">
+                    <i class="bi bi-play-circle-fill" id="16" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="bones" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Bones</strong><br>Imagine Dragons</p>
+            </li>
+
+            <li class="pop">
+                <div class="img_play">
+                    <img src="./Images/cuff_it.jpg" alt="Portada Cuff It">
+                    <i class="bi bi-play-circle-fill" id="17" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="cuff_it" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Cuff It</strong><br>Beyoncé</p>
+            </li>
+        </ul>
+        <br><br>
+        <h2>RAP</h2>
+        <ul>
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/astronaut_in_the_ocean.jpg" alt="Portada Astronaut In The Ocean">
+                    <i class="bi bi-play-circle-fill" id="18" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="astronaut_in_the_ocean" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Austronaut In The Ocean</strong><br>Masked Wolf</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/edamame.jpg" alt="Portada Edamame">
+                    <i class="bi bi-play-circle-fill" id="19" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="edamame" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Edamame</strong><br>bbno$ ft. Rich Brian</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/tyler_herro.jpg" alt="Portada Tyler Herro">
+                    <i class="bi bi-play-circle-fill" id="20" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="tyler_herro" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Tyler Herro</strong><br>Jack Harlow</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/se_acabo.jpg" alt="Portada Se Acabo">
+                    <i class="bi bi-play-circle-fill" id="21" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="se_acabo" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Se Acabo</strong><br>The Beatnuts ft. Method Man</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/till_i_collapse.jpg" alt="Portada Till I Collapse">
+                    <i class="bi bi-play-circle-fill" id="22" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="till_i_collapse" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Till I Collapse</strong><br>Eminem</p>
+            </li>
+
+            <li class="rap">
+                <div class="img_play">
+                    <img src="./Images/buss_down.jpg" alt="Portada Buss Down">
+                    <i class="bi bi-play-circle-fill" id="23" onclick="playthistrack(this.id)"></i>
+                    <i class="bi bi-heart" id="buss_down" onclick="dar_like(this.id, this)"></i>
+                </div>
+                <p><strong>Buss Down</strong><br>Aitch, ZieZie</p>
+            </li>
+        </ul>
+        <br><br>
+        <h2>ARTISTAS MÁS ESCUCHADOS</h2>
+        <ul>
+            <li class="artistasMasEscuchados">
+                <div class="img_play">
+                    <a href="Autor.html"> <img src="./images/maneskin-portada.jpg"  alt="Portada artista Maneskin"> </a>
+                </div>
+                <p><strong>Måneskin</strong></p>
+            </li>
+
+            <li class="artistasMasEscuchados">
+                <div class="img_play">
+                    <a href="Autor.html"><img src="./images/ed.jpeg" alt="Portada artista Ed Sheeran"></a>
+                </div>
+                <p><strong>Ed Sheeran</strong></p>
+            </li>
+
+            <li class="artistasMasEscuchados">
+                <div class="img_play">
+                    <a href="Autor.html"><img src="./Images/aitana.jpg" alt="Portada artista Aitana"></a>
+                </div>
+                <p><strong>Aitana</strong></p>
+            </li>
+
+            <li class="artistasMasEscuchados">
+                <div class="img_play">
+                    <a href="Autor.html"><img src="./Images/badbunny.jpg" alt="Portada artista Bad Bunny"></a>
+                </div>
+                <p><strong>Bad Bunny</strong></p>
+            </li>
+
+            <li class="artistasMasEscuchados">
+                <div class="img_play">
+                    <a href="Autor.html"><img src="./Images/eminem2.jpg" alt="Portada artista Eminem"></a>
+                </div>
+                <p><strong>Eminem</strong></p>
+            </li>
+
+            <li class="artistasMasEscuchados">
+                <div class="img_play">
+                    <a href="Autor.html"><img src="./Images/justinbieber.jpg"  alt="Portada artista Justin Bieber"></a>
+                </div>
+                <p><strong>Justin Bieber</strong>
+            </li>
+        </ul>
+        <br><br>
+        <h2>SEGUIDORES</h2>
+        <ul>
+            <li class="seguidores">
+                <div class="img_play">
+                    <a href="Seguidor.html"><img src="./Images/mujer.png" alt="Portada seguidor 1"></a>            
+                </div>
+                <p><strong>Lucía</strong></p>
+            </li>
+
+            <li class="seguidores">
+                <div class="img_play">
+                    <a href="Seguidor.html"><img src="./Images/hombre(1).png"  alt="Portada seguidor 2"></a>      
+                </div>
+                <p><strong>Manuel</strong></p>
+            </li>
+
+            <li class="seguidores">
+                <div class="img_play">
+                    <a href="Seguidor.html"><img src="./Images/hombre.png" alt="Portada seguidor 3"></a>
+                </div>
+                <p><strong>Carlos</strong></p>
+            </li>
+
+            <li class="seguidores">
+                <div class="img_play">
+                    <a href="Seguidor.html"><img src="./Images/mujer(1).png"  alt="Portada seguidor 4"></a>
+                </div>
+                <p><strong>Sofia</strong></p>
+            </li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
+
+    <div class="player">
+        <div class="player_img">
+            <div class="track-art"></div>
+            <div class="playpause-track" id="playpause-track" onclick="playpauseTrack()">
+                <!-- <i class="bi bi-stop-fill"></i> -->
+                <i class="bi bi-play-fill"></i>
+            </div>
+        </div>
+        <div class="player_content">
+            <div class="player_controls">
+                <i class="bi bi-skip-start-fill player__button prev-track" onclick="prevTrack()"></i>
+                <div class="textinplayer" onclick="openplayerpopup()">
+                    <div class="track-name">Track Name</div>
+                    <div class="track-artist">Track Artist</div>
+                </div>
+                <i class="bi bi-skip-end-fill player__button next-track" onclick="nextTrack()"></i>
+            </div>
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <label for = 'barra_player'>label</label>
+                <input id ="barra_player" type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="playerpopup">
+        <i class="bi bi-x-circle exit-popup-player" onclick="openplayerpopup()"></i>
+        <div id="player_img_popup">
+            <div class="track-art" id="track-art-popup"></div>
+            <div class="playpause-track" id="playpause-track-popup" onclick="playpauseTrack()">
+                <!-- <i class="bi bi-stop-fill"></i> -->
+                <i class="bi bi-play-fill"></i>
+            </div>
+        </div>
+
+        <div class="player_content_popup">
+            <i class="bi bi-skip-start-fill player__button prev-track" onclick="prevTrack()"></i>
+            <div class="textinplayer" id="textinpopupplayer">
+                <div class="track-name" id="track-name-popup">Track Name</div>
+                <div class="track-artist" id="track-artist-popup">Track Artist</div>
+            </div>
+            <i class="bi bi-skip-end-fill player__button next-track" onclick="nextTrack()"></i>
+        </div>
+
+        <div class="slider_container" id="slider_container_popup">
+            <div class="current-time" id="current-time-popup">00:00</div>
+            <label for="seek_slider_popup">label</label>
+            <input type="range" min="1" max="100" value="0" class="seek_slider" id="seek_slider_popup" onchange="seekTo()">
+            <div class="total-duration" id="total-duration-popup">00:00</div>
+        </div>
+        <div class="player_popup_icons">
+            <i class="bi bi-shuffle" id="shuffle" onclick="shuffletrack()"></i>
+            <i class="bi bi-repeat" id="repeat" onclick="repeatTrack()"></i>
+            <a id="share_popup" href="https://www.youtube.com"><i class="bi bi-box-arrow-up-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Footer/Reproductor-->
+    <footer class="footer">
+        <ul class="navegacion">
+            <li class="home"><a href="./Home.html"><i class="bi bi-house"></i></a></li>
+            <li><a href="./Listas.html"><i class="bi bi-music-note-list"></i></a></li>
+            <li><a href="./Calendario.html"><i class="bi bi-calendar-week"></i></a></li>
+            <li><a href="./Playlist_.html"><i class="bi bi-plus-square"></i></a></li>
+        </ul>        
+    </footer>
+
+    <!-- Enlace del script de Javascript-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="script/Home.js"></script>
+    <script src="script/Player.js"></script>
+</body>
+
+
+</html>
