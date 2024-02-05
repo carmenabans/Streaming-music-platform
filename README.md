@@ -1,1 +1,1 @@
-# Streaming-music-platform
+# Streaming-Music-Platform
