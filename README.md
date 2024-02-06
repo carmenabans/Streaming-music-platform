@@ -44,7 +44,7 @@ Music streaming functionality:
 
 ## Report
 
-Inthe following report you can find the Design methodology, the description of the prototype (Figma), the description of technologies used, an accessibility report and an evaluation report
+In the following report you can find the Design methodology, the description of the prototype (Figma), the description of technologies used, an accessibility report and an evaluation report
 
 English:
 [report_en.pdf](https://github.com/carmenabans/Streaming-music-platform/files/14168942/doc.en_unlocked.pdf)
