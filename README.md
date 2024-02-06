@@ -6,7 +6,8 @@
 
 ## Key Features:
 
-Music streaming functionality: Play, pause, and skip songs.
+Music streaming functionality: 
+  - Play, pause, and skip songs.
   - Register/Login
   - Search engine (songs, playlists, artists, albums)
   - Playlist creation
@@ -19,11 +20,11 @@ Music streaming functionality: Play, pause, and skip songs.
 
   - Figma: Designing and Prototyping the website.
 
-       Phone: https://www.figma.com/proto/v9YRuVDgHik1c7uLmI5IFU/PandaMusic?node-id=77-4465&starting-point-node-id=77%3A4465
-   
-       Tablet: https://www.figma.com/proto/v9YRuVDgHik1c7uLmI5IFU/PandaMusic?node-id=210-997&starting-point-node-id=210%3A997 
-   
-       Desktop: https://www.figma.com/proto/v9YRuVDgHik1c7uLmI5IFU/PandaMusic?node-id=92-4293&starting-point-node-id=92%3A4293
+        Phone: https://www.figma.com/proto/v9YRuVDgHik1c7uLmI5IFU/PandaMusic?node-id=77-4465&starting-point-node-id=77%3A4465
+    
+        Tablet: https://www.figma.com/proto/v9YRuVDgHik1c7uLmI5IFU/PandaMusic?node-id=210-997&starting-point-node-id=210%3A997 
+    
+        Desktop: https://www.figma.com/proto/v9YRuVDgHik1c7uLmI5IFU/PandaMusic?node-id=92-4293&starting-point-node-id=92%3A4293
 
   - HTML: Structure and content of the website.
   
