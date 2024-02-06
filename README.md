@@ -31,7 +31,7 @@ Music streaming functionality: Play, pause, and skip songs.
   
   - Arianna Potente Vázquez: https://github.com/Ari-Potente
   
-  - Ernesto Gracia Cancho: https://github.com/[username]
+  - Ernesto Gracia Cancho: https://github.com/Ernesto-Gracia-Cancho
 
 ## Report
 
