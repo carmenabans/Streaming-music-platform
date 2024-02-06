@@ -1,10 +1,10 @@
 # Streaming-Music-Platform
 
-## Summary:
+## Summary
 
  This repository contains the source code for a collaborative project developed by a team of 4 individuals to build a streaming music platform website using HTML, CSS, and JavaScript.
 
-## Key Features:
+## Key Features
 
 Music streaming functionality: 
   - Play, pause, and skip songs.
@@ -16,7 +16,7 @@ Music streaming functionality:
   - Calendar (new releases, upcoming releases, concerts)
   - Like option (artists and songs)
 
-## Technologies:
+## Technologies
 
   - Figma: Designing and Prototyping the website.
 
@@ -32,7 +32,7 @@ Music streaming functionality:
   
   - JavaScript: Interactivity and dynamic features of the website.
 
-## Team:
+## Team
 
   - Carmen Abans Maciel: https://github.com/carmenabans
   
